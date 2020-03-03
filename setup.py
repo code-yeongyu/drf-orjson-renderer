@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='drf_orjson',
-    version='2.0',
+    version='2.0.2',
     python_requires=">=3.6",
     description='Django Rest Framework ORJSON Renderer',
     author='Gizmag,baffolobill',
