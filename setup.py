@@ -2,13 +2,15 @@
 
 from setuptools import setup, find_packages
 
+
 setup(
-    name='drf_ujson',
-    version='1.2',
-    description='Django Rest Framework UJSON Renderer',
-    author='Gizmag',
-    author_email='tech@gizmag.com',
-    url='https://github.com/gizmag/drf-ujson-renderer',
-    packages=find_packages(),
-    install_requires=['django', 'ujson', 'djangorestframework']
+    name='drf_orjson',
+    version='2.0',
+    python_requires=">=3.6",
+    description='Django Rest Framework ORJSON Renderer',
+    author='Gizmag,baffolobill',
+    url='https://github.com/baffolobill/drf-orjson-renderer',
+    packages=find_packages(exclude=["tests"]),
+    install_requires=["django<3.0", "orjson", "djangorestframework<3.10"],
+    extras_require={"dev": ["pytest", "pytest-runner", "pytest-cov", "pytest-mock"]},
 )
