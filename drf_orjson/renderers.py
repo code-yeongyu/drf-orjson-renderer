@@ -1,7 +1,7 @@
 import orjson
 from rest_framework.renderers import BaseRenderer
+from rest_framework.utils.encoders import JSONEncoder
 
-from .encoders import JSONEncoder
 
 
 class ORJSONRenderer(BaseRenderer):
@@ -27,7 +27,7 @@ class ORJSONRenderer(BaseRenderer):
 
         return orjson.dumps(
             data, 
-            default=self.encoder_class,
+            default=self.encoder_class().encode,
             option=orjson.OPT_SERIALIZE_UUID | \
                 orjson.OPT_SERIALIZE_NUMPY | \
                 orjson.OPT_OMIT_MICROSECONDS | \
