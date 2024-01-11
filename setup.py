@@ -11,6 +11,6 @@ setup(
     author='Gizmag,baffolobill',
     url='https://github.com/baffolobill/drf-orjson-renderer',
     packages=find_packages(exclude=["tests"]),
-    install_requires=["django<3.0", "orjson", "djangorestframework<3.10"],
+    install_requires=["django<3.0", "orjson", "djangorestframework"],
     extras_require={"dev": ["pytest", "pytest-runner", "pytest-cov", "pytest-mock"]},
 )
